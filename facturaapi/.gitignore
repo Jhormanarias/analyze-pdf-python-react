@@ -1,0 +1,55 @@
+# ⛔ Archivos y carpetas generadas por Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# 🧪 Archivos de pruebas temporales
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+
+# 🔒 Archivos de configuración personal
+.env
+.env.*
+
+# 📦 Paquetes instalados
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# 📁 Entornos virtuales
+venv/
+.venv/
+ENV/
+env/
+env.bak/
+python_env/
+
+# 🐋 Archivos de Docker que no quieras trackear (opcional)
+*.pid
+
+# 🚀 Archivos del editor
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# 🔍 Base de datos local o archivos de almacenamiento
+*.sqlite3
+uploads/
+
+# 🧪 Pytest y coverage
+htmlcov/
+.tox/
+coverage.*
+.cache
+.pytest_cache/
+
+# 🔍 Otros
+.DS_Store
+Thumbs.db
