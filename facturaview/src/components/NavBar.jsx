@@ -13,6 +13,15 @@ export const NavBar = () => {
             <Nav.Item>
                 <Nav.Link as={Link} to="/uploadCheck">Upload</Nav.Link>
             </Nav.Item>
+            <Nav.Item>
+                <Nav.Link as={Link} to="/users">Users</Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+                <Nav.Link as={Link} to="/searchpersons">Search Persons</Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+                <Nav.Link as={Link} to="/products">Products</Nav.Link>
+            </Nav.Item>
         </Nav>
     )
 }
