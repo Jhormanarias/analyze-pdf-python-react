@@ -7,6 +7,13 @@ export default defineConfig({
   server: {
     host: true,           // <- esto permite acceso desde fuera del contenedor
     port: 5173,
-    strictPort: true
+    strictPort: true,
+    allowedHosts: [
+      'localhost',
+      '127.0.0.1',
+      'test-catalogue-app.ganantech.com',
+      '154.38.176.218'
+    ],
+    cors: true
   }
 })
