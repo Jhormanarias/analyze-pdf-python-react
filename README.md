@@ -1,0 +1,1 @@
+Proyecto que pretende escanea un pdf con un catalogo de un proveedor y que un emprendedor pueda escanearlo y definir precios y porcentajes para xtraer catalogo completo con precios del emprendedor en cuestión.
