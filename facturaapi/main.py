@@ -3,6 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 import os
 import fitz  # PyMuPDF
 from fastapi.responses import JSONResponse
+from uploadFile import extraer_precios
 
 app = FastAPI()
 
@@ -41,12 +42,15 @@ async def upload_file(file: UploadFile = File(...)):
         # 3. Extraer texto
         texto = extraer_texto_pdf(file_path)
 
+        productos = extraer_precios(file_path)  # Llamada nueva función
+
         # 4. Devolver respuesta exitosa
         return JSONResponse(
             status_code=201,
             content={
                 "filename": file.filename,
                 "message": "Archivo procesado correctamente",
+                "productos": productos,
                 "contenido_extraido": texto
             }
         )
