@@ -1,4 +1,4 @@
-""" import pdfplumber
+import pdfplumber
 import re
 import pandas as pd
 import json
@@ -29,12 +29,12 @@ def extraer_precios(pdf_path):
                             'precio_original': float(precio_match.group(2).replace(',', ''))
                         })
     return productos
- """
 
-import pdfplumber
+""" import pdfplumber
 import re
 import pandas as pd
 import json
+from pdfminer.high_level import extract_pages, extract_text
 
 def extraer_precios(pdf_path):
     productos = []
@@ -69,4 +69,13 @@ def extraer_precios(pdf_path):
                         })
                 
                 i += 1
-    return productos
+    return productos """
+
+""" def extractPdf():
+    for page_layout in extract_pages("uploads/LISTA 6 DE FEBRERO DE 2026_portatiles.pdf"):
+        for element in page_layout:
+            print(element)
+
+text=extract_text("uploads/LISTA 6 DE FEBRERO DE 2026_portatiles.pdf")
+print(text)
+ """

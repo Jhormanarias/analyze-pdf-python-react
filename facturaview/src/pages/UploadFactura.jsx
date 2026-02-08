@@ -21,7 +21,7 @@ export const UploadFactura = () => {
     try {
       /* link in text for try*/
       setStatus('Enviando...')
-      const res = await axios.post('https://test-catalogue-app.ganantech.com/api/upload', formData, {
+      const res = await axios.post(`${import.meta.env.VITE_API_HOST}/upload`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -38,9 +38,9 @@ export const UploadFactura = () => {
 
   return (
     <div>
-        <h1>UploadFactura</h1>
+        <h1>Transformar archivo PDF</h1>
         <form onSubmit={handleSubmit}>
-      <h2>Subir factura PDF</h2>
+      <h2>Subir farchivo PDF</h2>
       <input type="file" name="archivo" accept="application/pdf" required />
       <br /><br /><br /><br />
       <Button type="submit">Subir</Button>
